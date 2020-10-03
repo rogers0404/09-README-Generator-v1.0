@@ -1,6 +1,10 @@
+///////////////// Global Variables  ///////////////////////////////
+
 const inquirer = require('inquirer');
-const fs = require('fs');
+const generateSite = require('./src/create-file.js');
 const generateREADME = require('./src/readme-template');
+
+///////////////////////////////////////////////////////////////////
 
 //////////////// prompt from User /////////////////////////////////
 const promptUser = dataReadme => {
@@ -136,25 +140,27 @@ const promptUser = dataReadme => {
   ]);
 };
 
-//////////////// prompt from User /////////////////////////////////
+///////////////////////////////////////////////////////////////////
 
-//////////////// Promises /////////////////////////////////
+//////////////////// Promises /////////////////////////////////////
 
 promptUser()
   .then( data => {
-    console.log(data);
-    //return generateREADME();
+    //console.log(data);
+    return generateREADME();
   })
-//   .then(pageHTML => {
-//     return writeFile(pageHTML);
-//   })
-//   .then(writeFileResponse => {
-//     console.log(writeFileResponse);
-//     return copyFile();
-//   })
+   .then(fileReadme => {
+     return writeFile(fileReadme);
+   })
+  .then(writeFileResponse => {
+    console.log(writeFileResponse);
+//    return copyFile();
+   })
 //   .then(copyFileResponse => {
 //     console.log(copyFileResponse);
 //   })
   .catch(err => {
     console.log(err);
   });
+
+  ///////////////////////////////////////////////////////////////////
