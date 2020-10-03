@@ -8,17 +8,24 @@ const generateREADME = require('./src/readme-template');
 
 //////////////// prompt from User /////////////////////////////////
 const promptUser = dataReadme => {
+
+  console.log(`
+================================================
+Generating a Professional README file in Node.js
+================================================
+`);
+
   return inquirer.prompt([
     // Section README Title
     {
       type: 'input',
       name: 'title',
-      message: 'What is project title? (Required)',
+      message: 'What is project title? (Required): ',
       validate: titleInput => {
         if (titleInput) {
           return true;
         } else {
-          console.log('Please enter your Project Title!');
+          console.log('Please enter your Project Title! ');
           return false;
         }
       }
@@ -27,12 +34,12 @@ const promptUser = dataReadme => {
     {
         type: 'input',
         name: 'description',
-        message: 'Bring a brief description about your Project (Required)',
+        message: 'Bring a brief description about your Project (Required): ',
         validate: descriptionInput => {
           if (descriptionInput) {
             return true;
           } else {
-            console.log('Please enter a Description!');
+            console.log('Please enter a Description! ');
             return false;
           }
         }
@@ -41,7 +48,7 @@ const promptUser = dataReadme => {
     {
         type: 'input',
         name: 'install',
-        message: 'How to install (Required)',
+        message: 'How to install (Required): ',
         validate: installInput => {
             if (installInput) {
             return true;
@@ -55,13 +62,13 @@ const promptUser = dataReadme => {
     {
         type: 'confirm',
         name: 'confirmUsage',
-        message: 'Would you like to enter some information about the "Usage" section?',
+        message: 'Would you like to enter some information about the "Usage" section? ',
         default: true
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide some examples or code to show the Application Usage',
+        message: 'Provide some examples or code to show the Application Usage: ',
         when: ({ confirmUsage }) => {
             if (confirmUsage) {
               return true;
@@ -74,13 +81,13 @@ const promptUser = dataReadme => {
     {
         type: 'confirm',
         name: 'confirmContribution',
-        message: 'Would you like to enter some information about the "Contribution" section?',
+        message: 'Would you like to enter some information about the "Contribution" section? ',
         default: true
     },
     {
         type: 'input',
         name: 'contribution',
-        message: 'Mention and Aknowledge the Contributors',
+        message: 'Mention and Aknowledge the Contributors: ',
         when: ({ confirmContribution }) => {
             if (confirmContribution) {
               return true;
@@ -93,12 +100,12 @@ const promptUser = dataReadme => {
     {
         type: 'input',
         name: 'test',
-        message: 'Give a few examples of running code (Required)',
+        message: 'Give a few examples of running code (Required): ',
         validate: testInput => {
             if (testInput) {
             return true;
             } else {
-            console.log('Please give some examples for testing coding !');
+            console.log('Please give some examples for testing coding!');
             return false;
             }
         }
@@ -114,7 +121,7 @@ const promptUser = dataReadme => {
     {
       type: 'input',
       name: 'github',
-      message: 'Enter your GitHub Username (Required)',
+      message: 'Enter your GitHub Username (Required): ',
       validate: nameInput => {
         if (nameInput) {
           return true;
@@ -127,7 +134,7 @@ const promptUser = dataReadme => {
     {
         type: 'input',
         name: 'email',
-        message: 'Please Enter your email (Required)',
+        message: 'Please Enter your email (Required): ',
         validate: emailInput => {
           if (emailInput) {
             return true;
@@ -153,7 +160,11 @@ promptUser()
      return writeFile(fileReadme);
    })
   .then(writeFileResponse => {
-    console.log("Wonderful! ");
+    console.log(`
+================================================
+Finilizing. Wait while the App create the file
+================================================
+`);
     console.log(writeFileResponse);
    })
   .catch(err => {
