@@ -108,7 +108,7 @@ const promptUser = dataReadme => {
         type: 'rawlist',
         name: 'license',
         message: 'What Technologies did you use in this project with? (Check all that apply)',
-        choices: ['None', 'Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'Mozilla Public License 2.0 ']
+        choices: ['None', 'Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'Mozilla Public License 2.0']
     },
     // Section Questions
     {
@@ -153,12 +153,9 @@ promptUser()
      return writeFile(fileReadme);
    })
   .then(writeFileResponse => {
+    console.log("Wonderful! ");
     console.log(writeFileResponse);
-//    return copyFile();
    })
-//   .then(copyFileResponse => {
-//     console.log(copyFileResponse);
-//   })
   .catch(err => {
     console.log(err);
   });

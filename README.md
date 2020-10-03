@@ -1,5 +1,5 @@
 
-                                                                                        https://img.shields.io/static/v1?label=License&message=GNU&color=yellowgreen&&style=plastic
+                                                                                        ![v1](https://img.shields.io/static/v1?label=License&message=GNU&color=yellowgreen&&style=plastic)
 
 # Professional README Generator
 
@@ -32,20 +32,21 @@ Thank to all who helped to develop this app; specially to Github(rogers0404)
 ## License
 
 
-                Professional README Generator is licensed under the
+            Professional README Generator is licensed under the
 
-                https://img.shields.io/static/v1?label=License&message=GNU&color=yellowgreen&&style=plastic
-                
-                GNU General Public License v3.0
-                Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
+            ![v1](https://img.shields.io/static/v1?label=License&message=GNU&color=yellowgreen&&style=plastic)
 
-                Permissions | Limitations  |   Conditions
-                ------------ | -------------
-                Commercial use | Liability |  License and copyright notice
-                Modification | Warranty    |  State changes
-                Distribution |   |  Disclose source
-                Private use |     |     Same license
-                Patent use |     |
+            GNU General Public License v3.0
+
+            Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
+            
+            Permissions | Limitations  |   Conditions
+            ------------ | -------------  | -------------
+            Commercial use | Liability |  License and copyright notice
+            Modification | Warranty    |  State changes
+            Distribution |   |  Disclose source
+            Private use |     |     Same license
+            Patent use |     |
             
 
 ## Tests

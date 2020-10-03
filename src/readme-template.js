@@ -17,9 +17,9 @@ const getBadge = license =>{
           return "https://img.shields.io/static/v1?label=License&message=GNU&color=yellowgreen&&style=plastic";
         case "Mozilla Public License 2.0":
             return "https://img.shields.io/static/v1?label=License&message=Mozilla&color=orange&&style=plastic";
-        case "MIT License ":
+        case "MIT License":
             return "https://img.shields.io/static/v1?label=License&message=MIT&color=green&&style=plastic";
-        case "None ":
+        case "None":
             return "https://img.shields.io/static/v1?label=License&message=None&color=inactive&&style=plastic";    
     }
 };
@@ -27,86 +27,86 @@ const getBadge = license =>{
 
 ////////////////// Getting Text for License /////////////////////////////////
 
-const getDiscloseLicene = (license, title) =>{
+const getDiscloseLicense = (license, title) =>{
     switch(license) {
         case "Apache License 2.0":
             return `
-                ${title} is licensed under the
+            ${title} is licensed under the
 
-                [${getBadge(license)}](${getBadge(license)})
-                
-                ${license}
+            ![v1](${getBadge(license)})
 
-                A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
-                
-                Permissions | Limitations  |   Conditions
-                ------------ | -------------
-                Commercial use | Liability |  License and copyright notice
-                Modification | Warranty    |  State changes
-                Distribution | Trademark use   |
-                Private use |     |
-                Patent use |     |
+            ${license}
+
+            A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+
+            Permissions | Limitations  |   Conditions
+            ------------ | -------------  | -------------
+            Commercial use | Liability |  License and copyright notice
+            Modification | Warranty    |  State changes
+            Distribution | Trademark use   |
+            Private use |     |
+            Patent use |     |
             `;
         case "GNU General Public License v3.0":
             return `
-                ${title} is licensed under the
+            ${title} is licensed under the
 
-                [${getBadge(license)}](${getBadge(license)})
-                
-                ${license}
+            ![v1](${getBadge(license)})
 
-                Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
+            ${license}
 
-                Permissions | Limitations  |   Conditions
-                ------------ | -------------
-                Commercial use | Liability |  License and copyright notice
-                Modification | Warranty    |  State changes
-                Distribution |   |  Disclose source
-                Private use |     |     Same license
-                Patent use |     |
+            Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
+            
+            Permissions | Limitations  |   Conditions
+            ------------ | -------------  | -------------
+            Commercial use | Liability |  License and copyright notice
+            Modification | Warranty    |  State changes
+            Distribution |   |  Disclose source
+            Private use |     |     Same license
+            Patent use |     |
             `;
         case "Mozilla Public License 2.0":
             return `
-                ${title} is licensed under the
+            ${title} is licensed under the
 
-                [${getBadge(license)}](${getBadge(license)})
-                
-                ${license}
+            ![v1](${getBadge(license)})
 
-                Permissions of this weak copyleft license are conditioned on making available source code of licensed files and modifications of those files under the same license (or in certain cases, one of the GNU licenses). Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work may be distributed under different terms and without source code for files added in the larger work
- 
-                Permissions | Limitations  |   Conditions
-                ------------ | -------------
-                Commercial use | Liability |  License and copyright notice
-                Modification | Warranty    |  Same license (file)
-                Distribution | Trademark use  |  Disclose source
-                Private use |     |     
-                Patent use |     |
+            ${license}
+
+            Permissions of this weak copyleft license are conditioned on making available source code of licensed files and modifications of those files under the same license (or in certain cases, one of the GNU licenses). Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. However, a larger work using the licensed work may be distributed under different terms and without source code for files added in the larger work
+
+            Permissions | Limitations  |   Conditions
+            ------------ | -------------  | -------------
+            Commercial use | Liability |  License and copyright notice
+            Modification | Warranty    |  Same license (file)
+            Distribution | Trademark use  |  Disclose source
+            Private use |     |
+            Patent use |     |
             `;
-        case "MIT License ":
+        case "MIT License":
             return `
-                ${title} is licensed under the
+            ${title} is licensed under the
 
-                [${getBadge(license)}](${getBadge(license)})
-                
-                ${license}
+            ![v1](${getBadge(license)})
 
-                A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+            ${license}
 
-                Permissions | Limitations  |   Conditions
-                ------------ | -------------
-                Commercial use | Liability |   License and copyright notice
-                Modification | Warranty    |
-                Distribution |     |
-                Private use |     |
+            A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+
+            Permissions | Limitations  |   Conditions
+            ------------ | -------------  | -------------
+            Commercial use | Liability |   License and copyright notice
+            Modification | Warranty    |
+            Distribution |     |
+            Private use |     |
             `;
-        case "None ":
+        case "None":
             return `
-                ${title} is licensed under the
+            ${title} is licensed under the
 
-                [${getBadge(license)}](${getBadge(license)})
-                
-                ${license}
+            ![v1](${getBadge(license)})
+
+            ${license}
             
             `;    
     }
@@ -119,7 +119,7 @@ module.exports = templateData => {
     const { title, description, install, confirmUsage, usage, confirmContribution, contribution, test, license, github, email} = templateData;
   
     return `
-                                                                                        [${getBadge(license)}](${getBadge(license)})
+                                                                                        ![v1](${getBadge(license)})
 
 # ${title}
 
@@ -151,7 +151,7 @@ ${getMessage(confirmContribution, contribution)}
 
 ## License
 
-${getDiscloseLicene(license, title)}
+${getDiscloseLicense(license, title)}
 
 ## Tests
 
