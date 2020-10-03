@@ -1,7 +1,7 @@
 ///////////////// Global Variables  ///////////////////////////////
 
 const inquirer = require('inquirer');
-const generateSite = require('./src/create-file.js');
+const { writeFile } = require('./src/create-file.js');
 const generateREADME = require('./src/readme-template');
 
 ///////////////////////////////////////////////////////////////////
@@ -147,7 +147,7 @@ const promptUser = dataReadme => {
 promptUser()
   .then( data => {
     //console.log(data);
-    return generateREADME();
+    return generateREADME(data);
   })
    .then(fileReadme => {
      return writeFile(fileReadme);
